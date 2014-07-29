@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Save_Editor
+Partial Class Download_Mod
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,7 +24,7 @@ Partial Class Save_Editor
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Save_Editor
+        'Download_Mod
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -33,9 +33,9 @@ Partial Class Save_Editor
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Save_Editor"
+        Me.Name = "Download_Mod"
         Me.ShowInTaskbar = False
-        Me.Text = "Save Editor"
+        Me.Text = "Mods"
         Me.ResumeLayout(False)
 
     End Sub

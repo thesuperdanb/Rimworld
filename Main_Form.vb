@@ -157,9 +157,6 @@ Public Class Main_Form
     Private Sub Download_Mods_Click(sender As Object, e As EventArgs) Handles Download_Mods.Click
         Process.Start("http://rimworldgame.com/getmods")
     End Sub
-    Private Sub Mod_DB_Click(sender As Object, e As EventArgs) Handles Mod_DB.Click
-        Process.Start("http://www.moddb.com/games/rimworld/mods")
-    End Sub
     Private Sub Nexus_Mods_Click(sender As Object, e As EventArgs) Handles Nexus_Mods.Click
         Process.Start("http://www.nexusmods.com/rimworld/?")
     End Sub
@@ -185,7 +182,6 @@ Public Class Main_Form
     Private Sub Large_Address_Aware_CheckedChanged(sender As Object, e As EventArgs) Handles Large_Address_Aware.CheckedChanged
         Dim Ram As Integer = (System.Math.Round(My.Computer.Info.TotalPhysicalMemory / (1024 * 1024)))
         If Ram < 4000 Then
-            MsgBox("You need 4GB of ram to run large address aware.")
             Large_Address_Aware.Enabled = False
             Large_Address_Aware.Checked = False
         End If
@@ -199,15 +195,6 @@ Public Class Main_Form
     End Sub
     Private Sub Save_Folder_Click(sender As Object, e As EventArgs) Handles Save_Folder.Click
         Process.Start(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves")
-    End Sub
-
-    Private Sub Save_Edit_Button_Click(sender As Object, e As EventArgs) Handles Save_Edit_Button.Click
-        If Save_Editor.Visible Then Save_Editor.Hide()
-        Save_Editor.Show()
-        Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
-    End Sub
-    Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
-        Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
     End Sub
 
     Private Sub Refresh_List_Tick(sender As Object, e As EventArgs) Handles Refresh_List.Tick
@@ -226,5 +213,17 @@ Public Class Main_Form
             Next
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub EZ_Mod_Click(sender As Object, e As EventArgs) Handles EZ_Mod.Click
+        If Download_Mod.Visible Then
+            Download_Mod.Hide()
+        Else
+            Download_Mod.Show()
+            Download_Mod.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
+        End If
+    End Sub
+    Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
+        Download_Mod.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
     End Sub
 End Class
