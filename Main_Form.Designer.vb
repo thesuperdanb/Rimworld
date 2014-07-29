@@ -66,7 +66,7 @@ Partial Class Main_Form
         Me.Download_Panel.Location = New System.Drawing.Point(0, 395)
         Me.Download_Panel.Margin = New System.Windows.Forms.Padding(4)
         Me.Download_Panel.Name = "Download_Panel"
-        Me.Download_Panel.Size = New System.Drawing.Size(577, 29)
+        Me.Download_Panel.Size = New System.Drawing.Size(664, 29)
         Me.Download_Panel.TabIndex = 0
         '
         'ProgressBar
@@ -75,7 +75,7 @@ Partial Class Main_Form
         Me.ProgressBar.Location = New System.Drawing.Point(0, 0)
         Me.ProgressBar.Margin = New System.Windows.Forms.Padding(4)
         Me.ProgressBar.Name = "ProgressBar"
-        Me.ProgressBar.Size = New System.Drawing.Size(577, 29)
+        Me.ProgressBar.Size = New System.Drawing.Size(664, 29)
         Me.ProgressBar.TabIndex = 3
         '
         'Control_Panel
@@ -90,7 +90,7 @@ Partial Class Main_Form
         Me.Control_Panel.Controls.Add(Me.Name_Label)
         Me.Control_Panel.Controls.Add(Me.Play_Game)
         Me.Control_Panel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Control_Panel.Location = New System.Drawing.Point(201, 0)
+        Me.Control_Panel.Location = New System.Drawing.Point(288, 0)
         Me.Control_Panel.Margin = New System.Windows.Forms.Padding(4)
         Me.Control_Panel.Name = "Control_Panel"
         Me.Control_Panel.Size = New System.Drawing.Size(376, 395)
@@ -322,7 +322,7 @@ Partial Class Main_Form
         Me.Mod_View.ShowLines = False
         Me.Mod_View.ShowPlusMinus = False
         Me.Mod_View.ShowRootLines = False
-        Me.Mod_View.Size = New System.Drawing.Size(201, 395)
+        Me.Mod_View.Size = New System.Drawing.Size(288, 395)
         Me.Mod_View.TabIndex = 2
         '
         'Refresh_List
@@ -333,7 +333,7 @@ Partial Class Main_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(577, 424)
+        Me.ClientSize = New System.Drawing.Size(664, 424)
         Me.Controls.Add(Me.Mod_View)
         Me.Controls.Add(Me.Control_Panel)
         Me.Controls.Add(Me.Download_Panel)

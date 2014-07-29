@@ -77,18 +77,27 @@ Public Class Main_Form
         Call Lock()
         ProgressBar.Value = "0"
         Mod_View.Nodes.Clear()
-        Try
-            For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
-                ProgressBar.Value = "25"
-                Dim CleanDir As String
-                CleanDir = Dir.Replace(My.Application.Info.DirectoryPath + "\Mods", "")
-                Dim Clean As String
-                Clean = CleanDir.Replace("\", "")
-                Mod_View.Nodes.Add(Clean)
-                ProgressBar.Value = "100"
-            Next
-        Catch ex As Exception
-        End Try
+        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
+            Try
+                Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
+                Dim Name, author As String
+                reader.ReadLine()
+                reader.ReadLine()
+                Name = reader.ReadLine()
+                author = reader.ReadLine()
+                reader.Close()
+                Name = Name.Replace("<name>", "")
+                Name = Name.Replace("</name>", "")
+                Name = Name.Replace("  ", " ")
+                author = author.Replace("<author>", "")
+                author = author.Replace("</author>", "")
+                author = author.Replace("  ", " ")
+                Mod_View.Nodes.Add(Name & " By" & author)
+            Catch ex As Exception
+                Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
+                Mod_View.Nodes.Add(Dir)
+            End Try
+        Next
 
         Call Unlock()
     End Sub
@@ -203,16 +212,27 @@ Public Class Main_Form
         Catch ex As Exception
         End Try
         Mod_View.Nodes.Clear()
-        Try
-            For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
-                Dim CleanDir As String
-                CleanDir = Dir.Replace(My.Application.Info.DirectoryPath + "\Mods", "")
-                Dim Clean As String
-                Clean = CleanDir.Replace("\", "")
-                Mod_View.Nodes.Add(Clean)
-            Next
-        Catch ex As Exception
-        End Try
+        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
+            Try
+                Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
+                Dim Name, author As String
+                reader.ReadLine()
+                reader.ReadLine()
+                Name = reader.ReadLine()
+                author = reader.ReadLine()
+                reader.Close()
+                Name = Name.Replace("<name>", "")
+                Name = Name.Replace("</name>", "")
+                Name = Name.Replace("  ", " ")
+                author = author.Replace("<author>", "")
+                author = author.Replace("</author>", "")
+                author = author.Replace("  ", " ")
+                Mod_View.Nodes.Add(Name & " By" & author)
+            Catch ex As Exception
+                Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
+                Mod_View.Nodes.Add(Dir)
+            End Try
+        Next
     End Sub
 
     Private Sub EZ_Mod_Click(sender As Object, e As EventArgs) Handles EZ_Mod.Click
