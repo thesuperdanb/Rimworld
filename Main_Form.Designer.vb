@@ -327,7 +327,7 @@ Partial Class Main_Form
         '
         'Refresh_List
         '
-        Me.Refresh_List.Interval = 500
+        Me.Refresh_List.Interval = 5000
         '
         'Main_Form
         '
