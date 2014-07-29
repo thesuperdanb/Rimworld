@@ -95,6 +95,7 @@ Public Class Main_Form
                 Mod_View.Nodes.Add(Name & " By" & author)
             Catch ex As Exception
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
+                Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
                 Mod_View.Nodes.Add(" " & Dir)
             End Try
         Next
@@ -233,6 +234,7 @@ Public Class Main_Form
                 Mod_View.Nodes.Add(Name & " By" & author)
             Catch ex As Exception
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
+                Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
                 Mod_View.Nodes.Add(" " & Dir)
             End Try
         Next
