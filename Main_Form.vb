@@ -198,9 +198,12 @@ Public Class Main_Form
     End Sub
 
     Private Sub Update_Client_Click(sender As Object, e As EventArgs) Handles Update_Client.Click
-        MsgBox("Extract the Zip in to the game directory")
-        Process.Start("http://chaostermialcom.ipage.com/Update.zip")
-        Process.Start(My.Application.Info.DirectoryPath)
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "\Update.exe") Then
+            Process.Start(My.Application.Info.DirectoryPath & "\Update.exe")
+        Else
+            SaveFromResources(My.Application.Info.DirectoryPath & "\Update.exe", My.Resources.Update)
+            Process.Start(My.Application.Info.DirectoryPath & "\Update.exe")
+        End If
         End
     End Sub
     Private Sub Save_Folder_Click(sender As Object, e As EventArgs) Handles Save_Folder.Click

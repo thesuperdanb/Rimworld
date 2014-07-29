@@ -154,6 +154,7 @@
     <None Include="Resources\Core.zip" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Update.exe" />
     <Content Include="Rim World Icon.ico" />
   </ItemGroup>
   <ItemGroup>
