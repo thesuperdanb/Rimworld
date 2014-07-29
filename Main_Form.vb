@@ -84,19 +84,15 @@ Public Class Main_Form
         For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
             Try
                 Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
-                Dim Name, author As String
+                Dim Name As String
                 reader.ReadLine()
                 reader.ReadLine()
                 Name = reader.ReadLine()
-                author = reader.ReadLine()
                 reader.Close()
                 Name = Name.Replace("<name>", "")
                 Name = Name.Replace("</name>", "")
-                Name = Name.Replace("  ", " ")
-                author = author.Replace("<author>", "")
-                author = author.Replace("</author>", "")
-                author = author.Replace("  ", " ")
-                Mod_View.Nodes.Add(Name & " By" & author)
+                Name = Name.Replace(" ", "")
+                Mod_View.Nodes.Add(Name)
             Catch ex As Exception
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
                 Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
@@ -139,7 +135,6 @@ Public Class Main_Form
         ZipFile.ExtractToDirectory(zipPath, extractPath)
         ProgressBar.Value = "99"
         Call Load_Mods()
-
     End Sub
     Private Sub Delete_Mod_Click(sender As Object, e As EventArgs) Handles Delete_Mod.Click
         Call Lock()
@@ -158,12 +153,20 @@ Public Class Main_Form
         For Each cControl In Me.Controls
             cControl.Enabled = False
         Next cControl
+        Dim BControl As Control
+        For Each BControl In Download_Mod.Controls
+            BControl.Enabled = False
+        Next BControl
     End Sub
     Private Sub Unlock()
         Dim cControl As Control
         For Each cControl In Me.Controls
             cControl.Enabled = True
         Next cControl
+        Dim BControl As Control
+        For Each BControl In Download_Mod.Controls
+            BControl.Enabled = True
+        Next BControl
     End Sub
     Private Sub Show_Mod_Folder_Click(sender As Object, e As EventArgs) Handles Show_Mod_Folder.Click
         Process.Start(My.Application.Info.DirectoryPath & "\Mods\")
@@ -182,7 +185,7 @@ Public Class Main_Form
         End If
         SaveFromResources(My.Application.Info.DirectoryPath & "\Download" & "\download.zip", My.Resources.Core)
         Dim zipPath As String = My.Application.Info.DirectoryPath & "\Download" & "\download.zip"
-        Dim extractPath As String = My.Application.Info.DirectoryPath + "\Mods"
+        Dim extractPath As String = My.Application.Info.DirectoryPath + "\Mods\"
         ProgressBar.Value = "10"
         ZipFile.ExtractToDirectory(zipPath, extractPath)
         ProgressBar.Value = "99"
@@ -226,19 +229,15 @@ Public Class Main_Form
         For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
             Try
                 Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
-                Dim Name, author As String
+                Dim Name As String
                 reader.ReadLine()
                 reader.ReadLine()
                 Name = reader.ReadLine()
-                author = reader.ReadLine()
                 reader.Close()
                 Name = Name.Replace("<name>", "")
                 Name = Name.Replace("</name>", "")
-                Name = Name.Replace("  ", " ")
-                author = author.Replace("<author>", "")
-                author = author.Replace("</author>", "")
-                author = author.Replace("  ", " ")
-                Mod_View.Nodes.Add(Name & " By" & author)
+                Name = Name.Replace(" ", "")
+                Mod_View.Nodes.Add(Name)
             Catch ex As Exception
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
                 Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))

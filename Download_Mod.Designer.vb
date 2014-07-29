@@ -22,14 +22,29 @@ Partial Class Download_Mod
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Mod_View = New System.Windows.Forms.TreeView()
         Me.SuspendLayout()
+        '
+        'Mod_View
+        '
+        Me.Mod_View.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.Mod_View.FullRowSelect = True
+        Me.Mod_View.Location = New System.Drawing.Point(0, 0)
+        Me.Mod_View.Name = "Mod_View"
+        Me.Mod_View.PathSeparator = ""
+        Me.Mod_View.ShowPlusMinus = False
+        Me.Mod_View.ShowRootLines = False
+        Me.Mod_View.Size = New System.Drawing.Size(186, 461)
+        Me.Mod_View.TabIndex = 0
         '
         'Download_Mod
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(218, 461)
+        Me.ClientSize = New System.Drawing.Size(186, 461)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Mod_View)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -39,4 +54,5 @@ Partial Class Download_Mod
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents Mod_View As System.Windows.Forms.TreeView
 End Class

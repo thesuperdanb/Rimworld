@@ -253,7 +253,6 @@ Partial Class Main_Form
         '
         'EZ_Mod
         '
-        Me.EZ_Mod.Enabled = False
         Me.EZ_Mod.Location = New System.Drawing.Point(6, 25)
         Me.EZ_Mod.Name = "EZ_Mod"
         Me.EZ_Mod.Size = New System.Drawing.Size(115, 46)
@@ -313,7 +312,7 @@ Partial Class Main_Form
         Me.Mod_View.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Mod_View.CheckBoxes = True
         Me.Mod_View.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Mod_View.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Mod_View.FullRowSelect = True
         Me.Mod_View.Location = New System.Drawing.Point(0, 0)
         Me.Mod_View.Margin = New System.Windows.Forms.Padding(4)
