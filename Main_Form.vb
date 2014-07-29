@@ -77,6 +77,10 @@ Public Class Main_Form
         Call Lock()
         ProgressBar.Value = "0"
         Mod_View.Nodes.Clear()
+        If My.Computer.FileSystem.DirectoryExists(My.Application.Info.DirectoryPath + "\Mods") Then
+        Else
+            My.Computer.FileSystem.CreateDirectory(My.Application.Info.DirectoryPath + "\Mods")
+        End If
         For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
             Try
                 Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
