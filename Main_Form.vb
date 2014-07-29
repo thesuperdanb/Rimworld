@@ -207,6 +207,9 @@ Public Class Main_Form
     End Sub
 
     Private Sub Refresh_List_Tick(sender As Object, e As EventArgs) Handles Refresh_List.Tick
+        For Each tvn As TreeNode In Mod_View.Nodes
+            If tvn.Checked Then Return
+        Next
         Try
             Game_Version.Text = My.Computer.FileSystem.ReadAllText(My.Application.Info.DirectoryPath + "\Version.txt")
         Catch ex As Exception
