@@ -95,7 +95,7 @@ Public Class Main_Form
                 Mod_View.Nodes.Add(Name & " By" & author)
             Catch ex As Exception
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
-                Mod_View.Nodes.Add(Dir)
+                Mod_View.Nodes.Add(" " & Dir)
             End Try
         Next
 
@@ -233,7 +233,7 @@ Public Class Main_Form
                 Mod_View.Nodes.Add(Name & " By" & author)
             Catch ex As Exception
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
-                Mod_View.Nodes.Add(Dir)
+                Mod_View.Nodes.Add(" " & Dir)
             End Try
         Next
     End Sub
