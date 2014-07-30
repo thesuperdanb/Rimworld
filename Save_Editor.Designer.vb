@@ -22,32 +22,43 @@ Partial Class Save_Editor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Mod_Flow = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Mod_View = New System.Windows.Forms.TreeView()
         Me.SuspendLayout()
         '
-        'Mod_Flow
+        'Mod_View
         '
-        Me.Mod_Flow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Mod_Flow.Location = New System.Drawing.Point(0, 0)
-        Me.Mod_Flow.Name = "Mod_Flow"
-        Me.Mod_Flow.Size = New System.Drawing.Size(186, 461)
-        Me.Mod_Flow.TabIndex = 0
+        Me.Mod_View.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Mod_View.CheckBoxes = True
+        Me.Mod_View.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mod_View.FullRowSelect = True
+        Me.Mod_View.Location = New System.Drawing.Point(0, 0)
+        Me.Mod_View.Margin = New System.Windows.Forms.Padding(4)
+        Me.Mod_View.Name = "Mod_View"
+        Me.Mod_View.PathSeparator = ""
+        Me.Mod_View.ShowLines = False
+        Me.Mod_View.ShowPlusMinus = False
+        Me.Mod_View.ShowRootLines = False
+        Me.Mod_View.Size = New System.Drawing.Size(327, 125)
+        Me.Mod_View.TabIndex = 3
         '
-        'Download_Mod
+        'Save_Editor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(186, 461)
+        Me.ClientSize = New System.Drawing.Size(327, 424)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Mod_Flow)
+        Me.Controls.Add(Me.Mod_View)
+        Me.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Download_Mod"
+        Me.Name = "Save_Editor"
         Me.ShowInTaskbar = False
-        Me.Text = "Mods"
+        Me.Text = "Batch Save Commands"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Mod_Flow As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents Mod_View As System.Windows.Forms.TreeView
 End Class

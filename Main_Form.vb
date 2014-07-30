@@ -218,8 +218,10 @@ Public Class Main_Form
             Mod_View.Nodes.Add(" " & Dir)
         Next
     End Sub
-
-    Private Sub EZ_Mod_Click(sender As Object, e As EventArgs) Handles EZ_Mod.Click
+    Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
+        Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
+    End Sub
+    Private Sub Save_Edit_Button_Click(sender As Object, e As EventArgs) Handles Save_Edit_Button.Click
         If Save_Editor.Visible Then
             Save_Editor.Hide()
         Else
@@ -227,8 +229,4 @@ Public Class Main_Form
             Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
         End If
     End Sub
-    Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
-        Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
-    End Sub
-
 End Class

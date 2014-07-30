@@ -42,7 +42,7 @@ Partial Class Main_Form
         Me.Reset_Core = New System.Windows.Forms.Button()
         Me.Mod_Sites = New System.Windows.Forms.GroupBox()
         Me.Nexus_Mods = New System.Windows.Forms.Button()
-        Me.EZ_Mod = New System.Windows.Forms.Button()
+        Me.Coming_Soon = New System.Windows.Forms.Button()
         Me.Download_Mods = New System.Windows.Forms.Button()
         Me.Update_Client = New System.Windows.Forms.Button()
         Me.Game_Version = New System.Windows.Forms.Label()
@@ -138,7 +138,6 @@ Partial Class Main_Form
         '
         'Save_Edit_Button
         '
-        Me.Save_Edit_Button.Enabled = False
         Me.Save_Edit_Button.Location = New System.Drawing.Point(6, 25)
         Me.Save_Edit_Button.Name = "Save_Edit_Button"
         Me.Save_Edit_Button.Size = New System.Drawing.Size(105, 46)
@@ -233,7 +232,7 @@ Partial Class Main_Form
         'Mod_Sites
         '
         Me.Mod_Sites.Controls.Add(Me.Nexus_Mods)
-        Me.Mod_Sites.Controls.Add(Me.EZ_Mod)
+        Me.Mod_Sites.Controls.Add(Me.Coming_Soon)
         Me.Mod_Sites.Controls.Add(Me.Download_Mods)
         Me.Mod_Sites.Location = New System.Drawing.Point(243, 12)
         Me.Mod_Sites.Name = "Mod_Sites"
@@ -251,14 +250,15 @@ Partial Class Main_Form
         Me.Nexus_Mods.Text = "Nexus Mods"
         Me.Nexus_Mods.UseVisualStyleBackColor = True
         '
-        'EZ_Mod
+        'Coming_Soon
         '
-        Me.EZ_Mod.Location = New System.Drawing.Point(6, 25)
-        Me.EZ_Mod.Name = "EZ_Mod"
-        Me.EZ_Mod.Size = New System.Drawing.Size(115, 46)
-        Me.EZ_Mod.TabIndex = 14
-        Me.EZ_Mod.Text = "EZ Mod Manager"
-        Me.EZ_Mod.UseVisualStyleBackColor = True
+        Me.Coming_Soon.Enabled = False
+        Me.Coming_Soon.Location = New System.Drawing.Point(6, 25)
+        Me.Coming_Soon.Name = "Coming_Soon"
+        Me.Coming_Soon.Size = New System.Drawing.Size(115, 46)
+        Me.Coming_Soon.TabIndex = 14
+        Me.Coming_Soon.Text = "Coming Soon"
+        Me.Coming_Soon.UseVisualStyleBackColor = True
         '
         'Download_Mods
         '
@@ -371,7 +371,7 @@ Partial Class Main_Form
     Friend WithEvents Large_Address_Aware As System.Windows.Forms.CheckBox
     Friend WithEvents Save_Folder As System.Windows.Forms.Button
     Friend WithEvents Nexus_Mods As System.Windows.Forms.Button
-    Friend WithEvents EZ_Mod As System.Windows.Forms.Button
+    Friend WithEvents Coming_Soon As System.Windows.Forms.Button
     Friend WithEvents Save_Edit_Button As System.Windows.Forms.Button
     Friend WithEvents Reset_Core As System.Windows.Forms.Button
     Friend WithEvents Update_Client As System.Windows.Forms.Button
