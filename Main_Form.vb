@@ -207,10 +207,6 @@ Public Class Main_Form
         For Each tvn As TreeNode In Mod_View.Nodes
             If tvn.Checked Then Return
         Next
-        Try
-            Game_Version.Text = My.Computer.FileSystem.ReadAllText(My.Application.Info.DirectoryPath + "\Version.txt")
-        Catch ex As Exception
-        End Try
         Mod_View.Nodes.Clear()
         For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
             Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")

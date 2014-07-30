@@ -3,6 +3,7 @@ Imports System.Net
 Imports System.IO.Compression
 Imports System.Text
 Imports System.Security.Cryptography
+Imports System.Text.RegularExpressions
 
 Public Class Save_Editor
     Dim user As String = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
@@ -20,7 +21,7 @@ Public Class Save_Editor
         Next
     End Sub
 
-    Private Sub Check_All_Click(sender As Object, e As EventArgs) Handles Check_All.Click
+    Private Sub Check_All_Click(sender As Object, e As EventArgs)
         For Each tvn As TreeNode In Mod_View.Nodes
             tvn.Checked = True
         Next
@@ -28,11 +29,31 @@ Public Class Save_Editor
 
     Private Sub Max_Skills_Click(sender As Object, e As EventArgs) Handles Max_Skills.Click
         For Each tvn As TreeNode In Mod_View.Nodes
-            If tvn.Checked = True Then
+            If tvn.IsSelected = True Then
                 Try
                     Dim fileContents As String
                     fileContents = My.Computer.FileSystem.ReadAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text)
-                    fileContents = fileContents.Replace("<level>" & someString.Contains("[A-Z].") & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "0" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "1" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "1" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "2" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "3" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "4" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "5" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "6" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "7" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "8" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "9" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "10" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "11" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "12" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "13" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "14" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "15" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "16" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "17" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "18" & "</level>", "<level>20</level>")
+                    fileContents = fileContents.Replace("<level>" & "19" & "</level>", "<level>20</level>")
                     My.Computer.FileSystem.DeleteFile(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
                     My.Computer.FileSystem.WriteAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text, fileContents, True)
                 Catch ex As Exception
