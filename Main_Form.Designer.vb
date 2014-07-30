@@ -50,6 +50,7 @@ Partial Class Main_Form
         Me.Play_Game = New System.Windows.Forms.Button()
         Me.Mod_View = New System.Windows.Forms.TreeView()
         Me.Refresh_List = New System.Windows.Forms.Timer(Me.components)
+        Me.Monitor = New System.Windows.Forms.Timer(Me.components)
         Me.Download_Panel.SuspendLayout()
         Me.Control_Panel.SuspendLayout()
         Me.Mod_Tools.SuspendLayout()
@@ -328,6 +329,9 @@ Partial Class Main_Form
         '
         Me.Refresh_List.Interval = 5000
         '
+        'Monitor
+        '
+        '
         'Main_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -382,5 +386,6 @@ Partial Class Main_Form
     Friend WithEvents Save_Options As System.Windows.Forms.GroupBox
     Friend WithEvents Mod_Tools As System.Windows.Forms.GroupBox
     Friend WithEvents Refresh_List As System.Windows.Forms.Timer
+    Friend WithEvents Monitor As System.Windows.Forms.Timer
 
 End Class

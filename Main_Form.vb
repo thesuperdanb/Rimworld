@@ -68,7 +68,7 @@ Public Class Main_Form
                 Process.Start(My.Application.Info.DirectoryPath + "\Game.exe")
             End If
 
-            End
+            Me.MinimizeBox = True
         Else
             MsgBox("You Need To Download Core")
         End If
@@ -257,4 +257,5 @@ Public Class Main_Form
     Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
         Download_Mod.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
     End Sub
+
 End Class
