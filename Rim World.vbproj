@@ -93,6 +93,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lock_Unlock.vb" />
     <Compile Include="Main_Form.vb">
       <SubType>Form</SubType>
     </Compile>

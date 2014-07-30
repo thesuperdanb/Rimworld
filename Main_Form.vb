@@ -134,26 +134,6 @@ Public Class Main_Form
         Next
         Call Load_Mods()
     End Sub
-    Private Sub Lock()
-        Dim cControl As Control
-        For Each cControl In Me.Controls
-            cControl.Enabled = False
-        Next cControl
-        Dim BControl As Control
-        For Each BControl In Save_Editor.Controls
-            BControl.Enabled = False
-        Next BControl
-    End Sub
-    Private Sub Unlock()
-        Dim cControl As Control
-        For Each cControl In Me.Controls
-            cControl.Enabled = True
-        Next cControl
-        Dim BControl As Control
-        For Each BControl In Save_Editor.Controls
-            BControl.Enabled = True
-        Next BControl
-    End Sub
     Private Sub Show_Mod_Folder_Click(sender As Object, e As EventArgs) Handles Show_Mod_Folder.Click
         Process.Start(My.Application.Info.DirectoryPath & "\Mods\")
     End Sub

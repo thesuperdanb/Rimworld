@@ -12,13 +12,16 @@ Public Class Save_Editor
     End Sub
 
     Private Sub Save_Editor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call Lock()
         Me.Height = Main_Form.Height
         Me.Width = 228
         Mod_View.Nodes.Clear()
         For Each Dir As String In Directory.GetFiles(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves")
             Dir = Dir.Replace(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\", "")
+            Dir = Dir.Replace(".rim", "")
             Mod_View.Nodes.Add(Dir)
         Next
+        Call Unlock()
     End Sub
 
     Private Sub Check_All_Click(sender As Object, e As EventArgs)
@@ -28,11 +31,12 @@ Public Class Save_Editor
     End Sub
 
     Private Sub Max_Skills_Click(sender As Object, e As EventArgs) Handles Max_Skills.Click
+        Call Lock()
         For Each tvn As TreeNode In Mod_View.Nodes
             If tvn.IsSelected = True Then
                 Try
                     Dim fileContents As String
-                    fileContents = My.Computer.FileSystem.ReadAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text)
+                    fileContents = My.Computer.FileSystem.ReadAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text & ".rim")
                     fileContents = fileContents.Replace("<level>" & "0" & "</level>", "<level>20</level>")
                     fileContents = fileContents.Replace("<level>" & "1" & "</level>", "<level>20</level>")
                     fileContents = fileContents.Replace("<level>" & "1" & "</level>", "<level>20</level>")
@@ -54,12 +58,13 @@ Public Class Save_Editor
                     fileContents = fileContents.Replace("<level>" & "17" & "</level>", "<level>20</level>")
                     fileContents = fileContents.Replace("<level>" & "18" & "</level>", "<level>20</level>")
                     fileContents = fileContents.Replace("<level>" & "19" & "</level>", "<level>20</level>")
-                    My.Computer.FileSystem.DeleteFile(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
-                    My.Computer.FileSystem.WriteAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text, fileContents, True)
+                    My.Computer.FileSystem.DeleteFile(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text & ".rim", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+                    My.Computer.FileSystem.WriteAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text & ".rim", fileContents, True)
                 Catch ex As Exception
                     MsgBox("Error")
                 End Try
             End If
         Next
+        Call Unlock()
     End Sub
 End Class
