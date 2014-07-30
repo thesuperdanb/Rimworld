@@ -23,6 +23,8 @@ Partial Class Save_Editor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Mod_View = New System.Windows.Forms.TreeView()
+        Me.Check_All = New System.Windows.Forms.Button()
+        Me.Max_Skills = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Mod_View
@@ -39,19 +41,39 @@ Partial Class Save_Editor
         Me.Mod_View.ShowLines = False
         Me.Mod_View.ShowPlusMinus = False
         Me.Mod_View.ShowRootLines = False
-        Me.Mod_View.Size = New System.Drawing.Size(327, 125)
+        Me.Mod_View.Size = New System.Drawing.Size(212, 125)
         Me.Mod_View.TabIndex = 3
+        '
+        'Check_All
+        '
+        Me.Check_All.Location = New System.Drawing.Point(12, 132)
+        Me.Check_All.Name = "Check_All"
+        Me.Check_All.Size = New System.Drawing.Size(188, 31)
+        Me.Check_All.TabIndex = 4
+        Me.Check_All.Text = "Check All"
+        Me.Check_All.UseVisualStyleBackColor = True
+        '
+        'Max_Skills
+        '
+        Me.Max_Skills.Location = New System.Drawing.Point(12, 169)
+        Me.Max_Skills.Name = "Max_Skills"
+        Me.Max_Skills.Size = New System.Drawing.Size(188, 31)
+        Me.Max_Skills.TabIndex = 5
+        Me.Max_Skills.Text = "Max Skills"
+        Me.Max_Skills.UseVisualStyleBackColor = True
         '
         'Save_Editor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(327, 424)
+        Me.ClientSize = New System.Drawing.Size(212, 424)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Max_Skills)
+        Me.Controls.Add(Me.Check_All)
         Me.Controls.Add(Me.Mod_View)
         Me.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Save_Editor"
@@ -61,4 +83,6 @@ Partial Class Save_Editor
 
     End Sub
     Friend WithEvents Mod_View As System.Windows.Forms.TreeView
+    Friend WithEvents Check_All As System.Windows.Forms.Button
+    Friend WithEvents Max_Skills As System.Windows.Forms.Button
 End Class

@@ -342,6 +342,7 @@ Partial Class Main_Form
         Me.MaximizeBox = False
         Me.Name = "Main_Form"
         Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Rim World"
         Me.Download_Panel.ResumeLayout(False)
         Me.Control_Panel.ResumeLayout(False)
