@@ -22,21 +22,16 @@ Partial Class Download_Mod
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Mod_View = New System.Windows.Forms.TreeView()
+        Me.Mod_Flow = New System.Windows.Forms.FlowLayoutPanel()
         Me.SuspendLayout()
         '
-        'Mod_View
+        'Mod_Flow
         '
-        Me.Mod_View.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Mod_View.FullRowSelect = True
-        Me.Mod_View.Location = New System.Drawing.Point(0, 0)
-        Me.Mod_View.Name = "Mod_View"
-        Me.Mod_View.PathSeparator = ""
-        Me.Mod_View.ShowPlusMinus = False
-        Me.Mod_View.ShowRootLines = False
-        Me.Mod_View.Size = New System.Drawing.Size(186, 461)
-        Me.Mod_View.TabIndex = 0
+        Me.Mod_Flow.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Mod_Flow.Location = New System.Drawing.Point(0, 0)
+        Me.Mod_Flow.Name = "Mod_Flow"
+        Me.Mod_Flow.Size = New System.Drawing.Size(186, 461)
+        Me.Mod_Flow.TabIndex = 0
         '
         'Download_Mod
         '
@@ -44,7 +39,7 @@ Partial Class Download_Mod
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(186, 461)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Mod_View)
+        Me.Controls.Add(Me.Mod_Flow)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -54,5 +49,5 @@ Partial Class Download_Mod
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Mod_View As System.Windows.Forms.TreeView
+    Friend WithEvents Mod_Flow As System.Windows.Forms.FlowLayoutPanel
 End Class

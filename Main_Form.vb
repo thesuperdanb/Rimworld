@@ -81,23 +81,10 @@ Public Class Main_Form
         Else
             My.Computer.FileSystem.CreateDirectory(My.Application.Info.DirectoryPath + "\Mods")
         End If
-        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
-            Try
-                Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
-                Dim Name As String
-                reader.ReadLine()
-                reader.ReadLine()
-                Name = reader.ReadLine()
-                reader.Close()
-                Name = Name.Replace("<name>", "")
-                Name = Name.Replace("</name>", "")
-                Name = Name.Replace(" ", "")
-                Mod_View.Nodes.Add(Name)
-            Catch ex As Exception
+        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")      
                 Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
                 Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
                 Mod_View.Nodes.Add(" " & Dir)
-            End Try
         Next
 
         Call Unlock()
