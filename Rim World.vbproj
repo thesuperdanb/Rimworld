@@ -115,10 +115,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Download_Mod.Designer.vb">
-      <DependentUpon>Download_Mod.vb</DependentUpon>
+    <Compile Include="Save_Editor.Designer.vb">
+      <DependentUpon>Save_Editor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Download_Mod.vb">
+    <Compile Include="Save_Editor.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -132,8 +132,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Download_Mod.resx">
-      <DependentUpon>Download_Mod.vb</DependentUpon>
+    <EmbeddedResource Include="Save_Editor.resx">
+      <DependentUpon>Save_Editor.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

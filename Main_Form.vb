@@ -140,7 +140,7 @@ Public Class Main_Form
             cControl.Enabled = False
         Next cControl
         Dim BControl As Control
-        For Each BControl In Download_Mod.Controls
+        For Each BControl In Save_Editor.Controls
             BControl.Enabled = False
         Next BControl
     End Sub
@@ -150,7 +150,7 @@ Public Class Main_Form
             cControl.Enabled = True
         Next cControl
         Dim BControl As Control
-        For Each BControl In Download_Mod.Controls
+        For Each BControl In Save_Editor.Controls
             BControl.Enabled = True
         Next BControl
     End Sub
@@ -212,7 +212,7 @@ Public Class Main_Form
         Catch ex As Exception
         End Try
         Mod_View.Nodes.Clear()
-        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")      
+        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
             Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
             Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
             Mod_View.Nodes.Add(" " & Dir)
@@ -220,15 +220,15 @@ Public Class Main_Form
     End Sub
 
     Private Sub EZ_Mod_Click(sender As Object, e As EventArgs) Handles EZ_Mod.Click
-        If Download_Mod.Visible Then
-            Download_Mod.Hide()
+        If Save_Editor.Visible Then
+            Save_Editor.Hide()
         Else
-            Download_Mod.Show()
-            Download_Mod.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
+            Save_Editor.Show()
+            Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
         End If
     End Sub
     Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
-        Download_Mod.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
+        Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
     End Sub
 
 End Class
