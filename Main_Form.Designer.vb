@@ -81,6 +81,7 @@ Partial Class Main_Form
         'Control_Panel
         '
         Me.Control_Panel.Controls.Add(Me.Mod_Tools)
+        Me.Control_Panel.Controls.Add(Me.EZ_Mod)
         Me.Control_Panel.Controls.Add(Me.Save_Options)
         Me.Control_Panel.Controls.Add(Me.Process_Options)
         Me.Control_Panel.Controls.Add(Me.Core_Options)
@@ -233,18 +234,17 @@ Partial Class Main_Form
         'Mod_Sites
         '
         Me.Mod_Sites.Controls.Add(Me.Nexus_Mods)
-        Me.Mod_Sites.Controls.Add(Me.EZ_Mod)
         Me.Mod_Sites.Controls.Add(Me.Download_Mods)
-        Me.Mod_Sites.Location = New System.Drawing.Point(243, 12)
+        Me.Mod_Sites.Location = New System.Drawing.Point(243, 69)
         Me.Mod_Sites.Name = "Mod_Sites"
-        Me.Mod_Sites.Size = New System.Drawing.Size(126, 180)
+        Me.Mod_Sites.Size = New System.Drawing.Size(126, 123)
         Me.Mod_Sites.TabIndex = 18
         Me.Mod_Sites.TabStop = False
         Me.Mod_Sites.Text = "Mod Sites"
         '
         'Nexus_Mods
         '
-        Me.Nexus_Mods.Location = New System.Drawing.Point(6, 77)
+        Me.Nexus_Mods.Location = New System.Drawing.Point(6, 20)
         Me.Nexus_Mods.Name = "Nexus_Mods"
         Me.Nexus_Mods.Size = New System.Drawing.Size(115, 46)
         Me.Nexus_Mods.TabIndex = 13
@@ -253,16 +253,16 @@ Partial Class Main_Form
         '
         'EZ_Mod
         '
-        Me.EZ_Mod.Location = New System.Drawing.Point(6, 25)
+        Me.EZ_Mod.Location = New System.Drawing.Point(243, 12)
         Me.EZ_Mod.Name = "EZ_Mod"
-        Me.EZ_Mod.Size = New System.Drawing.Size(115, 46)
+        Me.EZ_Mod.Size = New System.Drawing.Size(126, 51)
         Me.EZ_Mod.TabIndex = 14
-        Me.EZ_Mod.Text = "EZ Mod Manager"
+        Me.EZ_Mod.Text = "Mod Menus"
         Me.EZ_Mod.UseVisualStyleBackColor = True
         '
         'Download_Mods
         '
-        Me.Download_Mods.Location = New System.Drawing.Point(6, 129)
+        Me.Download_Mods.Location = New System.Drawing.Point(6, 72)
         Me.Download_Mods.Name = "Download_Mods"
         Me.Download_Mods.Size = New System.Drawing.Size(115, 46)
         Me.Download_Mods.TabIndex = 6
