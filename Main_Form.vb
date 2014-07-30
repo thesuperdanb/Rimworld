@@ -86,7 +86,6 @@ Public Class Main_Form
                 Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
                 Mod_View.Nodes.Add(" " & Dir)
         Next
-
         Call Unlock()
     End Sub
     Private Sub Download_Core_Click(sender As Object, e As EventArgs) Handles Download_Core.Click
@@ -213,23 +212,10 @@ Public Class Main_Form
         Catch ex As Exception
         End Try
         Mod_View.Nodes.Clear()
-        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
-            Try
-                Dim reader As New System.IO.StreamReader(Dir & "\About\About.xml")
-                Dim Name As String
-                reader.ReadLine()
-                reader.ReadLine()
-                Name = reader.ReadLine()
-                reader.Close()
-                Name = Name.Replace("<name>", "")
-                Name = Name.Replace("</name>", "")
-                Name = Name.Replace(" ", "")
-                Mod_View.Nodes.Add(Name)
-            Catch ex As Exception
-                Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
-                Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
-                Mod_View.Nodes.Add(" " & Dir)
-            End Try
+        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")      
+            Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
+            Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
+            Mod_View.Nodes.Add(" " & Dir)
         Next
     End Sub
 
