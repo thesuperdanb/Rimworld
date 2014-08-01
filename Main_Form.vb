@@ -81,10 +81,9 @@ Public Class Main_Form
         Else
             My.Computer.FileSystem.CreateDirectory(My.Application.Info.DirectoryPath + "\Mods")
         End If
-        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")      
-                Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
-                Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
-                Mod_View.Nodes.Add(" " & Dir)
+        For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
+            Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
+            Mod_View.Nodes.Add(Dir)
         Next
         Call Unlock()
     End Sub
@@ -190,8 +189,7 @@ Public Class Main_Form
         Mod_View.Nodes.Clear()
         For Each Dir As String In Directory.GetDirectories(My.Application.Info.DirectoryPath + "\Mods")
             Dir = Dir.Replace(My.Application.Info.DirectoryPath & "\Mods\", "")
-            Dir = Trim(RegularExpressions.Regex.Replace(Dir, "[A-Z]", " ${0}"))
-            Mod_View.Nodes.Add(" " & Dir)
+            Mod_View.Nodes.Add(Dir)
         Next
     End Sub
     Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
