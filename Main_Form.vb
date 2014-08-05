@@ -7,6 +7,17 @@ Imports System.Security.Cryptography
 Public Class Main_Form
     Dim user As String = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
     Private Sub Main_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "/Game.exe") Then
+        Else
+            Play_Game.Enabled = False
+            MsgBox("Can't Find Game. Rename Rimworld to Game.exe")
+        End If
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "/4GB_Game.exe") Then
+        Else
+            Large_Address_Aware.Enabled = False
+            Large_Address_Aware.Checked = False
+        End If
+        Save_Editor.Show()
         Try
             Game_Version.Text = My.Computer.FileSystem.ReadAllText(My.Application.Info.DirectoryPath + "\Version.txt")
         Catch ex As Exception
@@ -178,9 +189,6 @@ Public Class Main_Form
         End If
         End
     End Sub
-    Private Sub Save_Folder_Click(sender As Object, e As EventArgs) Handles Save_Folder.Click
-        Process.Start(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves")
-    End Sub
 
     Private Sub Refresh_List_Tick(sender As Object, e As EventArgs) Handles Refresh_List.Tick
         For Each tvn As TreeNode In Mod_View.Nodes
@@ -195,7 +203,7 @@ Public Class Main_Form
     Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
         Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
     End Sub
-    Private Sub Save_Edit_Button_Click(sender As Object, e As EventArgs) Handles Save_Edit_Button.Click
+    Private Sub Save_Edit_Button_Click(sender As Object, e As EventArgs)
         If Save_Editor.Visible Then
             Save_Editor.Hide()
         Else

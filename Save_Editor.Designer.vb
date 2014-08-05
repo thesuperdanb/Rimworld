@@ -24,7 +24,7 @@ Partial Class Save_Editor
     Private Sub InitializeComponent()
         Me.Mod_View = New System.Windows.Forms.TreeView()
         Me.Max_Skills = New System.Windows.Forms.Button()
-        Me.Coming_Soon = New System.Windows.Forms.Button()
+        Me.Save_Folder = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Mod_View
@@ -45,22 +45,21 @@ Partial Class Save_Editor
         '
         'Max_Skills
         '
-        Me.Max_Skills.Location = New System.Drawing.Point(12, 132)
+        Me.Max_Skills.Location = New System.Drawing.Point(12, 169)
         Me.Max_Skills.Name = "Max_Skills"
         Me.Max_Skills.Size = New System.Drawing.Size(188, 31)
         Me.Max_Skills.TabIndex = 5
         Me.Max_Skills.Text = "Max Skills"
         Me.Max_Skills.UseVisualStyleBackColor = True
         '
-        'Coming_Soon
+        'Save_Folder
         '
-        Me.Coming_Soon.Enabled = False
-        Me.Coming_Soon.Location = New System.Drawing.Point(12, 169)
-        Me.Coming_Soon.Name = "Coming_Soon"
-        Me.Coming_Soon.Size = New System.Drawing.Size(188, 243)
-        Me.Coming_Soon.TabIndex = 6
-        Me.Coming_Soon.Text = "Coming Soon"
-        Me.Coming_Soon.UseVisualStyleBackColor = True
+        Me.Save_Folder.Location = New System.Drawing.Point(12, 132)
+        Me.Save_Folder.Name = "Save_Folder"
+        Me.Save_Folder.Size = New System.Drawing.Size(188, 31)
+        Me.Save_Folder.TabIndex = 13
+        Me.Save_Folder.Text = "Save Folder"
+        Me.Save_Folder.UseVisualStyleBackColor = True
         '
         'Save_Editor
         '
@@ -68,7 +67,7 @@ Partial Class Save_Editor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(212, 424)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Coming_Soon)
+        Me.Controls.Add(Me.Save_Folder)
         Me.Controls.Add(Me.Max_Skills)
         Me.Controls.Add(Me.Mod_View)
         Me.Font = New System.Drawing.Font("Arial", 12.0!)
@@ -78,11 +77,11 @@ Partial Class Save_Editor
         Me.MinimizeBox = False
         Me.Name = "Save_Editor"
         Me.ShowInTaskbar = False
-        Me.Text = "Batch Save Commands"
+        Me.Text = "Save Options"
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Mod_View As System.Windows.Forms.TreeView
     Friend WithEvents Max_Skills As System.Windows.Forms.Button
-    Friend WithEvents Coming_Soon As System.Windows.Forms.Button
+    Friend WithEvents Save_Folder As System.Windows.Forms.Button
 End Class

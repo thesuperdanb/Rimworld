@@ -67,4 +67,10 @@ Public Class Save_Editor
         Next
         Call Unlock()
     End Sub
+
+    Private Sub Save_Folder_Click(sender As Object, e As EventArgs) Handles Save_Folder.Click
+        Call Lock()
+        Process.Start(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves")
+        Call Unlock()
+    End Sub
 End Class

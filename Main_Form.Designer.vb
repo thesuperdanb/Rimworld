@@ -30,9 +30,6 @@ Partial Class Main_Form
         Me.Mod_Tools = New System.Windows.Forms.GroupBox()
         Me.Delete_Mod = New System.Windows.Forms.Button()
         Me.Show_Mod_Folder = New System.Windows.Forms.Button()
-        Me.Save_Options = New System.Windows.Forms.GroupBox()
-        Me.Save_Edit_Button = New System.Windows.Forms.Button()
-        Me.Save_Folder = New System.Windows.Forms.Button()
         Me.Process_Options = New System.Windows.Forms.GroupBox()
         Me.Dev_Mode = New System.Windows.Forms.CheckBox()
         Me.Reset_Cache = New System.Windows.Forms.CheckBox()
@@ -53,7 +50,6 @@ Partial Class Main_Form
         Me.Download_Panel.SuspendLayout()
         Me.Control_Panel.SuspendLayout()
         Me.Mod_Tools.SuspendLayout()
-        Me.Save_Options.SuspendLayout()
         Me.Process_Options.SuspendLayout()
         Me.Core_Options.SuspendLayout()
         Me.Mod_Sites.SuspendLayout()
@@ -63,7 +59,7 @@ Partial Class Main_Form
         '
         Me.Download_Panel.Controls.Add(Me.ProgressBar)
         Me.Download_Panel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Download_Panel.Location = New System.Drawing.Point(0, 395)
+        Me.Download_Panel.Location = New System.Drawing.Point(0, 350)
         Me.Download_Panel.Margin = New System.Windows.Forms.Padding(4)
         Me.Download_Panel.Name = "Download_Panel"
         Me.Download_Panel.Size = New System.Drawing.Size(686, 29)
@@ -81,7 +77,6 @@ Partial Class Main_Form
         'Control_Panel
         '
         Me.Control_Panel.Controls.Add(Me.Mod_Tools)
-        Me.Control_Panel.Controls.Add(Me.Save_Options)
         Me.Control_Panel.Controls.Add(Me.Process_Options)
         Me.Control_Panel.Controls.Add(Me.Core_Options)
         Me.Control_Panel.Controls.Add(Me.Mod_Sites)
@@ -93,14 +88,14 @@ Partial Class Main_Form
         Me.Control_Panel.Location = New System.Drawing.Point(310, 0)
         Me.Control_Panel.Margin = New System.Windows.Forms.Padding(4)
         Me.Control_Panel.Name = "Control_Panel"
-        Me.Control_Panel.Size = New System.Drawing.Size(376, 395)
+        Me.Control_Panel.Size = New System.Drawing.Size(376, 350)
         Me.Control_Panel.TabIndex = 1
         '
         'Mod_Tools
         '
         Me.Mod_Tools.Controls.Add(Me.Delete_Mod)
         Me.Mod_Tools.Controls.Add(Me.Show_Mod_Folder)
-        Me.Mod_Tools.Location = New System.Drawing.Point(7, 249)
+        Me.Mod_Tools.Location = New System.Drawing.Point(7, 193)
         Me.Mod_Tools.Name = "Mod_Tools"
         Me.Mod_Tools.Size = New System.Drawing.Size(230, 77)
         Me.Mod_Tools.TabIndex = 22
@@ -125,41 +120,12 @@ Partial Class Main_Form
         Me.Show_Mod_Folder.Text = "Mod Folder"
         Me.Show_Mod_Folder.UseVisualStyleBackColor = True
         '
-        'Save_Options
-        '
-        Me.Save_Options.Controls.Add(Me.Save_Edit_Button)
-        Me.Save_Options.Controls.Add(Me.Save_Folder)
-        Me.Save_Options.Location = New System.Drawing.Point(7, 164)
-        Me.Save_Options.Name = "Save_Options"
-        Me.Save_Options.Size = New System.Drawing.Size(230, 79)
-        Me.Save_Options.TabIndex = 21
-        Me.Save_Options.TabStop = False
-        Me.Save_Options.Text = "Save Options"
-        '
-        'Save_Edit_Button
-        '
-        Me.Save_Edit_Button.Location = New System.Drawing.Point(6, 25)
-        Me.Save_Edit_Button.Name = "Save_Edit_Button"
-        Me.Save_Edit_Button.Size = New System.Drawing.Size(105, 46)
-        Me.Save_Edit_Button.TabIndex = 15
-        Me.Save_Edit_Button.Text = "Save Editor"
-        Me.Save_Edit_Button.UseVisualStyleBackColor = True
-        '
-        'Save_Folder
-        '
-        Me.Save_Folder.Location = New System.Drawing.Point(119, 25)
-        Me.Save_Folder.Name = "Save_Folder"
-        Me.Save_Folder.Size = New System.Drawing.Size(105, 46)
-        Me.Save_Folder.TabIndex = 12
-        Me.Save_Folder.Text = "Save Folder"
-        Me.Save_Folder.UseVisualStyleBackColor = True
-        '
         'Process_Options
         '
         Me.Process_Options.Controls.Add(Me.Dev_Mode)
         Me.Process_Options.Controls.Add(Me.Reset_Cache)
         Me.Process_Options.Controls.Add(Me.Large_Address_Aware)
-        Me.Process_Options.Location = New System.Drawing.Point(7, 83)
+        Me.Process_Options.Location = New System.Drawing.Point(7, 112)
         Me.Process_Options.Name = "Process_Options"
         Me.Process_Options.Size = New System.Drawing.Size(230, 75)
         Me.Process_Options.TabIndex = 20
@@ -271,9 +237,9 @@ Partial Class Main_Form
         '
         'Update_Client
         '
-        Me.Update_Client.Location = New System.Drawing.Point(7, 332)
+        Me.Update_Client.Location = New System.Drawing.Point(7, 273)
         Me.Update_Client.Name = "Update_Client"
-        Me.Update_Client.Size = New System.Drawing.Size(362, 38)
+        Me.Update_Client.Size = New System.Drawing.Size(230, 53)
         Me.Update_Client.TabIndex = 17
         Me.Update_Client.Text = "Update Game Launcher"
         Me.Update_Client.UseVisualStyleBackColor = True
@@ -281,30 +247,30 @@ Partial Class Main_Form
         'Game_Version
         '
         Me.Game_Version.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Game_Version.Location = New System.Drawing.Point(109, 373)
+        Me.Game_Version.Location = New System.Drawing.Point(144, 329)
         Me.Game_Version.Name = "Game_Version"
-        Me.Game_Version.Size = New System.Drawing.Size(260, 16)
+        Me.Game_Version.Size = New System.Drawing.Size(220, 16)
         Me.Game_Version.TabIndex = 4
-        Me.Game_Version.Text = "Missing File"
+        Me.Game_Version.Text = "Can't Find Version"
         Me.Game_Version.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Name_Label
         '
         Me.Name_Label.AutoSize = True
         Me.Name_Label.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name_Label.Location = New System.Drawing.Point(4, 373)
+        Me.Name_Label.Location = New System.Drawing.Point(10, 329)
         Me.Name_Label.Name = "Name_Label"
-        Me.Name_Label.Size = New System.Drawing.Size(99, 16)
+        Me.Name_Label.Size = New System.Drawing.Size(128, 16)
         Me.Name_Label.TabIndex = 3
-        Me.Name_Label.Text = "Made by Dan Baer"
+        Me.Name_Label.Text = "Made by TheSuperDanB"
         '
         'Play_Game
         '
         Me.Play_Game.Location = New System.Drawing.Point(7, 12)
         Me.Play_Game.Name = "Play_Game"
-        Me.Play_Game.Size = New System.Drawing.Size(230, 65)
+        Me.Play_Game.Size = New System.Drawing.Size(230, 94)
         Me.Play_Game.TabIndex = 0
-        Me.Play_Game.Text = "Play"
+        Me.Play_Game.Text = "Play Rimworld"
         Me.Play_Game.UseVisualStyleBackColor = True
         '
         'Mod_View
@@ -321,7 +287,7 @@ Partial Class Main_Form
         Me.Mod_View.ShowLines = False
         Me.Mod_View.ShowPlusMinus = False
         Me.Mod_View.ShowRootLines = False
-        Me.Mod_View.Size = New System.Drawing.Size(310, 395)
+        Me.Mod_View.Size = New System.Drawing.Size(310, 350)
         Me.Mod_View.TabIndex = 2
         '
         'Refresh_List
@@ -331,7 +297,7 @@ Partial Class Main_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(686, 424)
+        Me.ClientSize = New System.Drawing.Size(686, 379)
         Me.Controls.Add(Me.Mod_View)
         Me.Controls.Add(Me.Control_Panel)
         Me.Controls.Add(Me.Download_Panel)
@@ -348,7 +314,6 @@ Partial Class Main_Form
         Me.Control_Panel.ResumeLayout(False)
         Me.Control_Panel.PerformLayout()
         Me.Mod_Tools.ResumeLayout(False)
-        Me.Save_Options.ResumeLayout(False)
         Me.Process_Options.ResumeLayout(False)
         Me.Process_Options.PerformLayout()
         Me.Core_Options.ResumeLayout(False)
@@ -370,16 +335,13 @@ Partial Class Main_Form
     Friend WithEvents Reset_Cache As System.Windows.Forms.CheckBox
     Friend WithEvents Dev_Mode As System.Windows.Forms.CheckBox
     Friend WithEvents Large_Address_Aware As System.Windows.Forms.CheckBox
-    Friend WithEvents Save_Folder As System.Windows.Forms.Button
     Friend WithEvents Nexus_Mods As System.Windows.Forms.Button
     Friend WithEvents Coming_Soon As System.Windows.Forms.Button
-    Friend WithEvents Save_Edit_Button As System.Windows.Forms.Button
     Friend WithEvents Reset_Core As System.Windows.Forms.Button
     Friend WithEvents Update_Client As System.Windows.Forms.Button
     Friend WithEvents Mod_Sites As System.Windows.Forms.GroupBox
     Friend WithEvents Core_Options As System.Windows.Forms.GroupBox
     Friend WithEvents Process_Options As System.Windows.Forms.GroupBox
-    Friend WithEvents Save_Options As System.Windows.Forms.GroupBox
     Friend WithEvents Mod_Tools As System.Windows.Forms.GroupBox
     Friend WithEvents Refresh_List As System.Windows.Forms.Timer
 

@@ -10,6 +10,14 @@
         Next BControl
     End Sub
     Public Sub Unlock()
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "/Game.exe") Then
+        Else
+            Main_Form.Play_Game.Enabled = False
+        End If
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "/4GB_Game.exe") Then
+        Else
+            Main_Form.Large_Address_Aware.Enabled = False
+        End If
         Dim cControl As Control
         For Each cControl In Main_Form.Controls
             cControl.Enabled = True
