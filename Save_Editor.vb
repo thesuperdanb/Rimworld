@@ -19,15 +19,12 @@ Public Class Save_Editor
         For Each Dir As String In Directory.GetFiles(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves")
             Dir = Dir.Replace(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\", "")
             Dir = Dir.Replace(".rim", "")
-            Mod_View.Nodes.Add(Dir)
+            If Dir.Contains("Autosave") Then
+            Else
+                Mod_View.Nodes.Add(Dir)
+            End If
         Next
         Call Unlock()
-    End Sub
-
-    Private Sub Check_All_Click(sender As Object, e As EventArgs)
-        For Each tvn As TreeNode In Mod_View.Nodes
-            tvn.Checked = True
-        Next
     End Sub
 
     Private Sub Max_Skills_Click(sender As Object, e As EventArgs) Handles Max_Skills.Click
