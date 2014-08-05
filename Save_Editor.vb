@@ -32,29 +32,14 @@ Public Class Save_Editor
         For Each tvn As TreeNode In Mod_View.Nodes
             If tvn.IsSelected = True Then
                 Try
+                    Dim list = Enumerable.Range(0, 20)
                     Dim fileContents As String
                     fileContents = My.Computer.FileSystem.ReadAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text & ".rim")
-                    fileContents = fileContents.Replace("<level>" & "0" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "1" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "1" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "2" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "3" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "4" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "5" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "6" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "7" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "8" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "9" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "10" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "11" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "12" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "13" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "14" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "15" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "16" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "17" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "18" & "</level>", "<level>20</level>")
-                    fileContents = fileContents.Replace("<level>" & "19" & "</level>", "<level>20</level>")
+                    Dim i As Integer = 0
+                    For Each obj In list
+                        fileContents = fileContents.Replace("<level>" & i & "</level>", "<level>20</level>")
+                        i += 1
+                    Next
                     My.Computer.FileSystem.DeleteFile(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text & ".rim", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
                     My.Computer.FileSystem.WriteAllText(user & "\AppData\LocalLow\Ludeon Studios\RimWorld\Saves\" & tvn.Text & ".rim", fileContents, True)
                 Catch ex As Exception
