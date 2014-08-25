@@ -157,8 +157,6 @@ Partial Class Main_Form
         'Large_Address_Aware
         '
         Me.Large_Address_Aware.AutoSize = true
-        Me.Large_Address_Aware.Checked = true
-        Me.Large_Address_Aware.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Large_Address_Aware.Location = New System.Drawing.Point(6, 48)
         Me.Large_Address_Aware.Name = "Large_Address_Aware"
         Me.Large_Address_Aware.Size = New System.Drawing.Size(214, 22)
