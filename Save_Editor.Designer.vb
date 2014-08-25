@@ -25,21 +25,21 @@ Partial Class Save_Editor
         Me.Mod_View = New System.Windows.Forms.TreeView()
         Me.Max_Skills = New System.Windows.Forms.Button()
         Me.Save_Folder = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
+        Me.SuspendLayout
         '
         'Mod_View
         '
         Me.Mod_View.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Mod_View.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mod_View.FullRowSelect = True
+        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Mod_View.FullRowSelect = true
         Me.Mod_View.Location = New System.Drawing.Point(0, 0)
         Me.Mod_View.Margin = New System.Windows.Forms.Padding(4)
         Me.Mod_View.Name = "Mod_View"
         Me.Mod_View.PathSeparator = ""
-        Me.Mod_View.ShowLines = False
-        Me.Mod_View.ShowPlusMinus = False
-        Me.Mod_View.ShowRootLines = False
+        Me.Mod_View.ShowLines = false
+        Me.Mod_View.ShowPlusMinus = false
+        Me.Mod_View.ShowRootLines = false
         Me.Mod_View.Size = New System.Drawing.Size(212, 125)
         Me.Mod_View.TabIndex = 3
         '
@@ -50,7 +50,7 @@ Partial Class Save_Editor
         Me.Max_Skills.Size = New System.Drawing.Size(188, 31)
         Me.Max_Skills.TabIndex = 5
         Me.Max_Skills.Text = "Max Skills"
-        Me.Max_Skills.UseVisualStyleBackColor = True
+        Me.Max_Skills.UseVisualStyleBackColor = true
         '
         'Save_Folder
         '
@@ -59,28 +59,28 @@ Partial Class Save_Editor
         Me.Save_Folder.Size = New System.Drawing.Size(188, 31)
         Me.Save_Folder.TabIndex = 13
         Me.Save_Folder.Text = "Save Folder"
-        Me.Save_Folder.UseVisualStyleBackColor = True
+        Me.Save_Folder.UseVisualStyleBackColor = true
         '
         'Save_Editor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9!, 18!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(212, 424)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Save_Folder)
         Me.Controls.Add(Me.Max_Skills)
         Me.Controls.Add(Me.Mod_View)
-        Me.Font = New System.Drawing.Font("Arial", 12.0!)
+        Me.Font = New System.Drawing.Font("Arial", 12!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.MaximizeBox = false
+        Me.MinimizeBox = false
         Me.Name = "Save_Editor"
-        Me.ShowInTaskbar = False
+        Me.ShowIcon = false
+        Me.ShowInTaskbar = false
         Me.Text = "Save Options"
-        Me.ResumeLayout(False)
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
     Friend WithEvents Mod_View As System.Windows.Forms.TreeView
     Friend WithEvents Max_Skills As System.Windows.Forms.Button
     Friend WithEvents Save_Folder As System.Windows.Forms.Button

@@ -17,7 +17,6 @@ Public Class Main_Form
             Large_Address_Aware.Enabled = False
             Large_Address_Aware.Checked = False
         End If
-        Save_Editor.Show()
         Try
             Game_Version.Text = My.Computer.FileSystem.ReadAllText(My.Application.Info.DirectoryPath + "\Version.txt")
         Catch ex As Exception
@@ -200,15 +199,8 @@ Public Class Main_Form
             Mod_View.Nodes.Add(Dir)
         Next
     End Sub
-    Private Sub Main_Form_LocationChanged(sender As Object, e As EventArgs) Handles Me.LocationChanged
-        Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
-    End Sub
-    Private Sub Save_Edit_Button_Click(sender As Object, e As EventArgs)
-        If Save_Editor.Visible Then
-            Save_Editor.Hide()
-        Else
-            Save_Editor.Show()
-            Save_Editor.Location = New Point(Me.Location.X + Me.Width, Me.Location.Y)
-        End If
+
+    Private Sub Coming_Soon_Click(sender As Object, e As EventArgs) Handles Coming_Soon.Click
+        Save_Editor.Show()
     End Sub
 End Class

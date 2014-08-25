@@ -47,13 +47,13 @@ Partial Class Main_Form
         Me.Play_Game = New System.Windows.Forms.Button()
         Me.Mod_View = New System.Windows.Forms.TreeView()
         Me.Refresh_List = New System.Windows.Forms.Timer(Me.components)
-        Me.Download_Panel.SuspendLayout()
-        Me.Control_Panel.SuspendLayout()
-        Me.Mod_Tools.SuspendLayout()
-        Me.Process_Options.SuspendLayout()
-        Me.Core_Options.SuspendLayout()
-        Me.Mod_Sites.SuspendLayout()
-        Me.SuspendLayout()
+        Me.Download_Panel.SuspendLayout
+        Me.Control_Panel.SuspendLayout
+        Me.Mod_Tools.SuspendLayout
+        Me.Process_Options.SuspendLayout
+        Me.Core_Options.SuspendLayout
+        Me.Mod_Sites.SuspendLayout
+        Me.SuspendLayout
         '
         'Download_Panel
         '
@@ -99,7 +99,7 @@ Partial Class Main_Form
         Me.Mod_Tools.Name = "Mod_Tools"
         Me.Mod_Tools.Size = New System.Drawing.Size(230, 77)
         Me.Mod_Tools.TabIndex = 22
-        Me.Mod_Tools.TabStop = False
+        Me.Mod_Tools.TabStop = false
         Me.Mod_Tools.Text = "Mod Tools"
         '
         'Delete_Mod
@@ -109,7 +109,7 @@ Partial Class Main_Form
         Me.Delete_Mod.Size = New System.Drawing.Size(105, 46)
         Me.Delete_Mod.TabIndex = 5
         Me.Delete_Mod.Text = "Delete Selected"
-        Me.Delete_Mod.UseVisualStyleBackColor = True
+        Me.Delete_Mod.UseVisualStyleBackColor = true
         '
         'Show_Mod_Folder
         '
@@ -118,7 +118,7 @@ Partial Class Main_Form
         Me.Show_Mod_Folder.Size = New System.Drawing.Size(105, 46)
         Me.Show_Mod_Folder.TabIndex = 7
         Me.Show_Mod_Folder.Text = "Mod Folder"
-        Me.Show_Mod_Folder.UseVisualStyleBackColor = True
+        Me.Show_Mod_Folder.UseVisualStyleBackColor = true
         '
         'Process_Options
         '
@@ -129,42 +129,42 @@ Partial Class Main_Form
         Me.Process_Options.Name = "Process_Options"
         Me.Process_Options.Size = New System.Drawing.Size(230, 75)
         Me.Process_Options.TabIndex = 20
-        Me.Process_Options.TabStop = False
+        Me.Process_Options.TabStop = false
         Me.Process_Options.Text = "Process Options"
         '
         'Dev_Mode
         '
-        Me.Dev_Mode.AutoSize = True
-        Me.Dev_Mode.Checked = True
+        Me.Dev_Mode.AutoSize = true
+        Me.Dev_Mode.Checked = true
         Me.Dev_Mode.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Dev_Mode.Location = New System.Drawing.Point(128, 25)
         Me.Dev_Mode.Name = "Dev_Mode"
         Me.Dev_Mode.Size = New System.Drawing.Size(99, 22)
         Me.Dev_Mode.TabIndex = 10
         Me.Dev_Mode.Text = "Dev Mode"
-        Me.Dev_Mode.UseVisualStyleBackColor = True
+        Me.Dev_Mode.UseVisualStyleBackColor = true
         '
         'Reset_Cache
         '
-        Me.Reset_Cache.AutoSize = True
+        Me.Reset_Cache.AutoSize = true
         Me.Reset_Cache.Location = New System.Drawing.Point(6, 25)
         Me.Reset_Cache.Name = "Reset_Cache"
         Me.Reset_Cache.Size = New System.Drawing.Size(118, 22)
         Me.Reset_Cache.TabIndex = 9
         Me.Reset_Cache.Text = "Reset Cache"
-        Me.Reset_Cache.UseVisualStyleBackColor = True
+        Me.Reset_Cache.UseVisualStyleBackColor = true
         '
         'Large_Address_Aware
         '
-        Me.Large_Address_Aware.AutoSize = True
-        Me.Large_Address_Aware.Checked = True
+        Me.Large_Address_Aware.AutoSize = true
+        Me.Large_Address_Aware.Checked = true
         Me.Large_Address_Aware.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Large_Address_Aware.Location = New System.Drawing.Point(6, 48)
         Me.Large_Address_Aware.Name = "Large_Address_Aware"
         Me.Large_Address_Aware.Size = New System.Drawing.Size(214, 22)
         Me.Large_Address_Aware.TabIndex = 11
         Me.Large_Address_Aware.Text = "4GB Large Address Aware"
-        Me.Large_Address_Aware.UseVisualStyleBackColor = True
+        Me.Large_Address_Aware.UseVisualStyleBackColor = true
         '
         'Core_Options
         '
@@ -174,7 +174,7 @@ Partial Class Main_Form
         Me.Core_Options.Name = "Core_Options"
         Me.Core_Options.Size = New System.Drawing.Size(126, 128)
         Me.Core_Options.TabIndex = 19
-        Me.Core_Options.TabStop = False
+        Me.Core_Options.TabStop = false
         Me.Core_Options.Text = "Core Options"
         '
         'Download_Core
@@ -183,8 +183,8 @@ Partial Class Main_Form
         Me.Download_Core.Name = "Download_Core"
         Me.Download_Core.Size = New System.Drawing.Size(115, 46)
         Me.Download_Core.TabIndex = 2
-        Me.Download_Core.Text = "Reset" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Online"
-        Me.Download_Core.UseVisualStyleBackColor = True
+        Me.Download_Core.Text = "Reset"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Online"
+        Me.Download_Core.UseVisualStyleBackColor = true
         '
         'Reset_Core
         '
@@ -193,7 +193,7 @@ Partial Class Main_Form
         Me.Reset_Core.Size = New System.Drawing.Size(115, 46)
         Me.Reset_Core.TabIndex = 16
         Me.Reset_Core.Text = "Reset Embedded"
-        Me.Reset_Core.UseVisualStyleBackColor = True
+        Me.Reset_Core.UseVisualStyleBackColor = true
         '
         'Mod_Sites
         '
@@ -204,8 +204,8 @@ Partial Class Main_Form
         Me.Mod_Sites.Name = "Mod_Sites"
         Me.Mod_Sites.Size = New System.Drawing.Size(126, 180)
         Me.Mod_Sites.TabIndex = 18
-        Me.Mod_Sites.TabStop = False
-        Me.Mod_Sites.Text = "Mod Sites"
+        Me.Mod_Sites.TabStop = false
+        Me.Mod_Sites.Text = "Mod Tools"
         '
         'Nexus_Mods
         '
@@ -214,17 +214,16 @@ Partial Class Main_Form
         Me.Nexus_Mods.Size = New System.Drawing.Size(115, 46)
         Me.Nexus_Mods.TabIndex = 13
         Me.Nexus_Mods.Text = "Nexus Mods"
-        Me.Nexus_Mods.UseVisualStyleBackColor = True
+        Me.Nexus_Mods.UseVisualStyleBackColor = true
         '
         'Coming_Soon
         '
-        Me.Coming_Soon.Enabled = False
         Me.Coming_Soon.Location = New System.Drawing.Point(6, 25)
         Me.Coming_Soon.Name = "Coming_Soon"
         Me.Coming_Soon.Size = New System.Drawing.Size(115, 46)
         Me.Coming_Soon.TabIndex = 14
-        Me.Coming_Soon.Text = "Coming Soon"
-        Me.Coming_Soon.UseVisualStyleBackColor = True
+        Me.Coming_Soon.Text = "Save Editor"
+        Me.Coming_Soon.UseVisualStyleBackColor = true
         '
         'Download_Mods
         '
@@ -233,7 +232,7 @@ Partial Class Main_Form
         Me.Download_Mods.Size = New System.Drawing.Size(115, 46)
         Me.Download_Mods.TabIndex = 6
         Me.Download_Mods.Text = "Ludeon Forums"
-        Me.Download_Mods.UseVisualStyleBackColor = True
+        Me.Download_Mods.UseVisualStyleBackColor = true
         '
         'Update_Client
         '
@@ -242,11 +241,11 @@ Partial Class Main_Form
         Me.Update_Client.Size = New System.Drawing.Size(230, 53)
         Me.Update_Client.TabIndex = 17
         Me.Update_Client.Text = "Update Game Launcher"
-        Me.Update_Client.UseVisualStyleBackColor = True
+        Me.Update_Client.UseVisualStyleBackColor = true
         '
         'Game_Version
         '
-        Me.Game_Version.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Game_Version.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Game_Version.Location = New System.Drawing.Point(144, 329)
         Me.Game_Version.Name = "Game_Version"
         Me.Game_Version.Size = New System.Drawing.Size(220, 16)
@@ -256,8 +255,8 @@ Partial Class Main_Form
         '
         'Name_Label
         '
-        Me.Name_Label.AutoSize = True
-        Me.Name_Label.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Name_Label.AutoSize = true
+        Me.Name_Label.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Name_Label.Location = New System.Drawing.Point(10, 329)
         Me.Name_Label.Name = "Name_Label"
         Me.Name_Label.Size = New System.Drawing.Size(128, 16)
@@ -271,22 +270,22 @@ Partial Class Main_Form
         Me.Play_Game.Size = New System.Drawing.Size(230, 94)
         Me.Play_Game.TabIndex = 0
         Me.Play_Game.Text = "Play Rimworld"
-        Me.Play_Game.UseVisualStyleBackColor = True
+        Me.Play_Game.UseVisualStyleBackColor = true
         '
         'Mod_View
         '
         Me.Mod_View.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Mod_View.CheckBoxes = True
+        Me.Mod_View.CheckBoxes = true
         Me.Mod_View.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mod_View.FullRowSelect = True
+        Me.Mod_View.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Mod_View.FullRowSelect = true
         Me.Mod_View.Location = New System.Drawing.Point(0, 0)
         Me.Mod_View.Margin = New System.Windows.Forms.Padding(4)
         Me.Mod_View.Name = "Mod_View"
         Me.Mod_View.PathSeparator = ""
-        Me.Mod_View.ShowLines = False
-        Me.Mod_View.ShowPlusMinus = False
-        Me.Mod_View.ShowRootLines = False
+        Me.Mod_View.ShowLines = false
+        Me.Mod_View.ShowPlusMinus = false
+        Me.Mod_View.ShowRootLines = false
         Me.Mod_View.Size = New System.Drawing.Size(310, 350)
         Me.Mod_View.TabIndex = 2
         '
@@ -295,32 +294,32 @@ Partial Class Main_Form
         '
         'Main_Form
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9!, 18!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(686, 379)
         Me.Controls.Add(Me.Mod_View)
         Me.Controls.Add(Me.Control_Panel)
         Me.Controls.Add(Me.Download_Panel)
-        Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximizeBox = False
+        Me.MaximizeBox = false
         Me.Name = "Main_Form"
-        Me.ShowIcon = False
+        Me.ShowIcon = false
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Rim World"
-        Me.Download_Panel.ResumeLayout(False)
-        Me.Control_Panel.ResumeLayout(False)
-        Me.Control_Panel.PerformLayout()
-        Me.Mod_Tools.ResumeLayout(False)
-        Me.Process_Options.ResumeLayout(False)
-        Me.Process_Options.PerformLayout()
-        Me.Core_Options.ResumeLayout(False)
-        Me.Mod_Sites.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        Me.Download_Panel.ResumeLayout(false)
+        Me.Control_Panel.ResumeLayout(false)
+        Me.Control_Panel.PerformLayout
+        Me.Mod_Tools.ResumeLayout(false)
+        Me.Process_Options.ResumeLayout(false)
+        Me.Process_Options.PerformLayout
+        Me.Core_Options.ResumeLayout(false)
+        Me.Mod_Sites.ResumeLayout(false)
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
     Friend WithEvents Download_Panel As System.Windows.Forms.Panel
     Friend WithEvents Control_Panel As System.Windows.Forms.Panel
     Friend WithEvents ProgressBar As System.Windows.Forms.ProgressBar
