@@ -11,6 +11,7 @@ Public Class Main_Form
         Else
             Play_Game.Enabled = False
             MsgBox("Can't Find Game. Rename Rimworld to Game.exe")
+            End
         End If
         If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "/4GB_Game.exe") Then
         Else
